@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Email Verification</title>
+</head>
+<body>
+    <h1>Email Verification</h1>
+    <p>If you see this page, your verification link works!</p>
+    <p>Query params:</p>
+    <pre id="params"></pre>
+
+    <script>
+        // Display userId and secret from query params
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('params').textContent = JSON.stringify(Object.fromEntries(params), null, 2);
+    </script>
+</body>
+</html>
